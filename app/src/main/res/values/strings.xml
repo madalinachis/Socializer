@@ -4,4 +4,15 @@
     <string name="finding_service">Finding local services</string>
     <string name="btn_send">Send</string>
     <string name="txt_hint">Type Message</string>
+    <string name="loginBtn">Login</string>
+    <string name="registerBtn">Register</string>
+    <string name="emailHint">E-mail</string>
+    <string name="passwordHint">Password</string>
+    <string name="save_email">Save E-Mail</string>
+    <string name="forgotPassword">Forgot your password?</string>
+    <string name="acceptTerms"><![CDATA[Accept Terms, Conditions & Policy]]></string>
+    <string name="birthdayHint">Birthday</string>
+    <string name="confirmPasswordHint">Confirm Password</string>
+    <string name="create_account">Create Account</string>
+    <string name="alreadyMember">Already a member? Login</string>
 </resources>

@@ -16,16 +16,24 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".WiFiServiceDiscoveryActivity"
-            android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name="licenta.socializer.ui.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="licenta.socializer.ui.RegisterAccountActivity"
+            android:label="Register">
+        </activity>
+
+        <activity
+            android:name="licenta.socializer.WiFiServiceDiscoveryActivity"
+            android:label="Register">
+        </activity>
+
     </application>
 
 </manifest>
