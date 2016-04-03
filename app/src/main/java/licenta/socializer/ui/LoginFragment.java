@@ -62,6 +62,12 @@ public class LoginFragment extends Fragment{
         startActivity(registerIntent);
     }
 
+    @OnClick(R.id.btnLocation)
+    public void handleLocation() {
+        Intent registerIntent = new Intent(getActivity(), DeviceLocation.class);
+        startActivity(registerIntent);
+    }
+
     @OnClick(R.id.forgotPassword)
     public void resetPassword() {
         Toast.makeText(getActivity(), "Reset password!", LENGTH_SHORT).show();
