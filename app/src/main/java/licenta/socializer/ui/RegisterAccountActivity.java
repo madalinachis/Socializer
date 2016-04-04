@@ -9,7 +9,7 @@ import licenta.socializer.R;
 /**
  * Created by Madalina.Chis on 3/1/2016.
  */
-public class RegisterAccountActivity extends AppCompatActivity{
+public class RegisterAccountActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

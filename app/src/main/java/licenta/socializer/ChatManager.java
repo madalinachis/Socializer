@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.Socket;
+import java.util.Arrays;
 
 /**
  * Handles reading and writing of messages with socket buffers. Uses a Handler
@@ -23,19 +24,17 @@ public class ChatManager implements Runnable {
         this.handler = handler;
     }
 
-    private InputStream iStream;
     private OutputStream oStream;
     private static final String TAG = "ChatHandler";
 
     @Override
     public void run() {
         try {
-            iStream = socket.getInputStream();
+            InputStream iStream = socket.getInputStream();
             oStream = socket.getOutputStream();
             byte[] buffer = new byte[1024];
             int bytes;
-            handler.obtainMessage(WiFiServiceDiscoveryActivity.MY_HANDLE, this)
-                    .sendToTarget();
+            handler.obtainMessage(WiFiServiceDiscoveryActivity.MY_HANDLE, this).sendToTarget();
             while (true) {
                 try {
                     // Read from the InputStream
@@ -44,9 +43,8 @@ public class ChatManager implements Runnable {
                         break;
                     }
                     // Send the obtained bytes to the UI Activity
-                    Log.d(TAG, "Rec:" + String.valueOf(buffer));
-                    handler.obtainMessage(WiFiServiceDiscoveryActivity.MESSAGE_READ,
-                            bytes, -1, buffer).sendToTarget();
+                    Log.d(TAG, "Rec:" + Arrays.toString(buffer));
+                    handler.obtainMessage(WiFiServiceDiscoveryActivity.MESSAGE_READ, bytes, -1, buffer).sendToTarget();
                 } catch (IOException e) {
                     Log.e(TAG, "disconnected", e);
                 }

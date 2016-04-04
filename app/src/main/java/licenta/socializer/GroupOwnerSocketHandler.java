@@ -53,6 +53,7 @@ public class GroupOwnerSocketHandler extends Thread {
                     if (socket != null && !socket.isClosed())
                         socket.close();
                 } catch (IOException ioe) {
+                    Log.d(TAG, "Error!");
                 }
                 e.printStackTrace();
                 pool.shutdownNow();

@@ -23,14 +23,15 @@ import static android.widget.Toast.LENGTH_SHORT;
 /**
  * Created by Madalina on 01.03.2016.
  */
-public class LoginFragment extends Fragment{
+public class LoginFragment extends Fragment {
 
     private static final String EMAIL_PATTERN = "^[a-zA-Z0-9#_~!$&'()*+,;=:.\"(),:;<>@\\[\\]\\\\]+@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*$";
     private Pattern pattern = Pattern.compile(EMAIL_PATTERN);
-    private Matcher matcher;
 
-    @Bind(R.id.emailWrapper) TextInputLayout emailWrapper;
-    @Bind(R.id.passwordWrapper) TextInputLayout passwordWrapper;
+    @Bind(R.id.emailWrapper)
+    TextInputLayout emailWrapper;
+    @Bind(R.id.passwordWrapper)
+    TextInputLayout passwordWrapper;
 
 
     @Override
@@ -75,17 +76,17 @@ public class LoginFragment extends Fragment{
 
     public boolean validateEmail(String email) {
         boolean validator = false;
-        matcher = pattern.matcher(email);
-        if (matcher.matches()){
-            validator=true;
+        Matcher matcher = pattern.matcher(email);
+        if (matcher.matches()) {
+            validator = true;
         }
         return validator;
     }
 
     public boolean validatePassword(String password) {
         boolean validator = false;
-        if (password.length() > 5){
-            validator=true;
+        if (password.length() > 5) {
+            validator = true;
         }
         return validator;
     }
