@@ -51,20 +51,6 @@
             android:label="Location">
         </activity>
 
-        <activity
-            android:name=".WiFiDirectActivity"
-            android:label="@string/app_name" android:launchMode="singleTask">
-            <intent-filter>
-                <action
-                    android:name="android.intent.action.MAIN" />
-                <category
-                    android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-
-        <service android:enabled="true" android:name=".FileTransferService" />
-
     </application>
 
 </manifest>
